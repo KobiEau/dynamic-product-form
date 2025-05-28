@@ -169,10 +169,13 @@ const message=document.getElementById("form-message");
     thumbnail: imageUrl,
     brand: brand
   }
-
+  console.log(`products=${products}`);
   products.push(newProduct);
-  displayProducts(newProduct);
+  console.log(`products.push(newProduct) =`)
+  console.log(products);
   displayProducts([newProduct]);
+
+  form.reset();
 
 });
 
