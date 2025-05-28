@@ -29,7 +29,6 @@ div#left{
     display: flex;
     flex-direction: column;
     flex-wrap:wrap;
-    background-color: antiquewhite;
     align-items: center;
 }
 
