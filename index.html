@@ -19,19 +19,19 @@
             <form action="" id="Product-form">
                 <p id="form-message"></p>
                 <div class="form-group">
-                    <input type="text" name="name" id="product-name"  placeholder="Product Name"  >
+                    <input type="text" name="name" id="product-name"  placeholder="Product Name"  required >
                 </div>
                 <div class="form-group">
-                    <textarea name="description" id="description" cols="30" rows="10" placeholder="Description"></textarea>
+                    <textarea name="description" id="description" cols="30" rows="10" placeholder="Description" required></textarea>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="image" id="image" placeholder="Image URL" >
+                    <input type="text" name="image" id="image" placeholder="Image URL" required>
                 </div>
                 <div class="form-group">
-                    <input type="number" name="price" id="price" min="1" placeholder="Input Product Price">
+                    <input type="number" name="price" id="price" placeholder="Input Product Price" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="brand" id="brand-name" placeholder="Brand Name" >
+                    <input type="text" name="brand" id="brand-name" placeholder="Brand Name" required>
                 </div>
                 <button type="submit">Add</button>
             </form>
