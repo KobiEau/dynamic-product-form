@@ -13,9 +13,69 @@ body {
 main {
     padding: 2rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     row-gap: 2rem;
+    column-gap: 2rem;
     height: 100%;
+    width: 100%;
+}
+
+main #left,main #right{
+    width: 50%;
+}
+
+/* form */
+div#left{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    background-color: antiquewhite;
+    align-items: center;
+}
+
+form{
+    padding: 15px 10px;
+    max-width: 400px;
+    width: 100%;
+    max-height: 500px;
+    height: 100%;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+}
+
+
+
+input,textarea{
+    width: 100%;
+    padding: 19x;
+    resize: none;
+    padding: 7px 10px;
+}
+
+
+
+input
+
+/* form [input="text"]{
+    width: 100%;
+} */
+
+.form-group{
+    margin: 7px 0;
+}
+
+/* Error and Success Messages */
+.error{
+    text-align: center;
+    color: red;
+}
+
+.success{
+    text-align: center;
+    color: green;
 }
 
 #products {
@@ -43,6 +103,11 @@ main {
     height: auto;
     border-radius: 4px;
     margin-bottom: 1rem;
+}
+
+.section-heading{
+    text-align: center;
+    margin-bottom: 0.5rem;
 }
 
 .product-card h2 {

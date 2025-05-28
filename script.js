@@ -1,5 +1,5 @@
 const productsContainer = document.getElementById("products");
-
+const form= document.getElementById("Product-form");
 const products = [
   {
     id: 1,
@@ -104,13 +104,83 @@ const products = [
   },
 ];
 
+
+  
+form.addEventListener('submit',(event)=>{
+  
+  event.preventDefault();
+
+const message=document.getElementById("form-message");
+  
+  const description=document.getElementById("description").value;
+  const imageUrl=document.getElementById("image").value;
+  const price=parseInt(document.getElementById("price").value);
+  console.log(`Price= ${price}`);
+  
+  const brand=document.getElementById("brand-name").value;
+
+
+  const productName=document.getElementById("product-name").value;
+
+    console.log("Checkpoint");
+  //checking for empty fields
+    if(productName == ""){
+      console.log("first if");
+      message.innerText="The Product Name field is empty";
+      message.className="error";
+      return;
+    }
+    if(description == ""){
+      console.log("2nd if");
+      message.innerText="The Description field is empty";
+      message.className="error";
+      return;
+    }
+    if(imageUrl == ""){
+      console.log("3rd if");
+      message.innerText="The Image field is empty";
+      message.className="error";
+      return;
+    }
+    if(isNaN(price) || price ==''){
+      console.log("4th if");
+      message.innerText="The Price field is empty";
+      message.className="error";
+      return;
+    }
+    if(brand == ""){
+      console.log("5th if");
+      message.innerText="The Brand Name field is empty";
+      message.className="error";
+      return;
+    }
+
+    console.log("6th if");
+    message.className="success"
+    message.innerText="Success"
+    
+
+
+  //creating new object with form inputs
+  const newProduct = {
+    title: productName,
+    description: description,
+    price: price,
+    thumbnail: imageUrl,
+    brand: brand
+  }
+
+  products.push(newProduct);
+
+});
+
 function displayProducts(products) {
   products.forEach((product) => {
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");
 
     productCard.innerHTML = `
-                <img src="${product.thumbnail}" alt="${product.title}">
+                <img src="${product.thumbnail}" alt="${product.title}" loading="lazy">
                 <h3>${product.title}</h3>
                 <p>${product.description}</p>
                 <p class="price">Price: $${product.price.toFixed(2)}</p>
