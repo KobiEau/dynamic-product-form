@@ -125,37 +125,37 @@ const message=document.getElementById("form-message");
     console.log("Checkpoint");
   //checking for empty fields
     if(productName == ""){
-      console.log("first if");
+      
       message.innerText="The Product Name field is empty";
       message.className="error";
       return;
     }
     if(description == ""){
-      console.log("2nd if");
+      
       message.innerText="The Description field is empty";
       message.className="error";
       return;
     }
     if(imageUrl == ""){
-      console.log("3rd if");
+    
       message.innerText="The Image field is empty";
       message.className="error";
       return;
     }
     if(isNaN(price) || price ==''){
-      console.log("4th if");
+  
       message.innerText="The Price field is empty";
       message.className="error";
       return;
     }
     if(brand == ""){
-      console.log("5th if");
+      
       message.innerText="The Brand Name field is empty";
       message.className="error";
       return;
     }
 
-    console.log("6th if");
+    
     message.className="success"
     message.innerText="Success"
     
@@ -171,6 +171,8 @@ const message=document.getElementById("form-message");
   }
 
   products.push(newProduct);
+  displayProducts(newProduct);
+  displayProducts([newProduct]);
 
 });
 
